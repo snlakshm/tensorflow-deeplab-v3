@@ -16,7 +16,7 @@ from utils import dataset_util
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--data_dir', type=str, default='/home/amittel/Desktop/Consistent_Semantic_Segmentation/NYU',
+parser.add_argument('--data_dir', type=str, default='Consistent_Semantic_Segmentation/NYU',
                     help='Path to the directory containing the PASCAL VOC data.')
 
 parser.add_argument('--output_path', type=str, default='./dataset_nyu',
