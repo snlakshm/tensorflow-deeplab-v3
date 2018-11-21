@@ -83,7 +83,7 @@ def main(unused_argv):
 
   for pred_dict, image_path in zip(predictions, image_files):
     image_basename = os.path.splitext(os.path.basename(image_path))[0]
-    output_filename = image_basename + '_mask.png'
+    output_filename = image_basename + '_mask.jpg'
     path_to_output = os.path.join(output_dir, output_filename)
 
     print("generating:", path_to_output)

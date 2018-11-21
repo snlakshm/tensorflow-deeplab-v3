@@ -76,7 +76,7 @@ def dict_to_tf_example(image_path,
     'image/encoded': dataset_util.bytes_feature(encoded_jpg),
     'image/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
     'label/encoded': dataset_util.bytes_feature(encoded_label),
-    'label/format': dataset_util.bytes_feature('png'.encode('utf8')),
+    'label/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
   }))
   return example
 

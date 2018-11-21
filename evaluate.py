@@ -50,7 +50,7 @@ def main(unused_argv):
 
   examples = dataset_util.read_examples_list(FLAGS.evaluation_data_list)
   image_files = [os.path.join(FLAGS.image_data_dir, filename) + '.jpg' for filename in examples]
-  label_files = [os.path.join(FLAGS.label_data_dir, filename) + '.png' for filename in examples]
+  label_files = [os.path.join(FLAGS.label_data_dir, filename) + '.jpg' for filename in examples]
 
   features, labels = preprocessing.eval_input_fn(image_files, label_files)
 
