@@ -108,3 +108,21 @@ This repo borrows code heavily from
 - [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
 - [TensorFlow-Slim](https://github.com/tensorflow/models/tree/master/research/slim) 
 - [TensorFlow](https://github.com/tensorflow/tensorflow)
+
+## Training for NYU
+First we need to create the training dataset. For that go into the Consistent_Semantic_Segmentation directory and download the "nyu_depth_v2_labeled.mat" dataset from [here](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html). Then run the following script:
+
+```bash
+python extract_dataset.py
+```
+
+For training model, you first need to convert original data to
+the TensorFlow TFRecord format. This enables to accelerate training seep.
+```bash
+python create_pascal_tf_record_nyu.py
+```
+Once you created TFrecord for PASCAL VOC training and validation deta,
+you can start training model as follow:
+```bash
+python train.py --data_dir './dataset_nyu/'
+```
