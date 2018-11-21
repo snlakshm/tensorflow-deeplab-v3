@@ -85,6 +85,8 @@ def extract_dataset(args):
 	# 	print(cmap[i,:])
 
 	# Create target Directory if don't exist
+        if not os.path.exists(args.root_dir):
+                os.mkdir(args.root_dir)
 	path = os.path.join(args.root_dir, args.image_dir)
 	if not os.path.exists(path):
 		os.mkdir(path)
