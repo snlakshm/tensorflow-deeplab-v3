@@ -54,7 +54,7 @@ def atrous_spatial_pyramid_pooling(inputs, output_stride, batch_norm_decay, is_t
         # (b) the image-level features
         with tf.variable_scope("image_level_features"):
           # global average pooling
-          image_level_features = tf.reduce_mean(inputs, [1, 2], name='global_average_pooling', keepdims=True)
+          image_level_features = tf.reduce_mean(inputs, [1, 2], name='global_average_pooling', keep_dims=True)
           # 1x1 convolution with 256 filters( and batch normalization)
           image_level_features = layers_lib.conv2d(image_level_features, depth, [1, 1], stride=1, scope='conv_1x1')
           # bilinearly upsample features

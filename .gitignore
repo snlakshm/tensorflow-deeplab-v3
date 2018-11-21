@@ -112,3 +112,7 @@ models
 dataset/inference_output/
 .DS_Store
 dataset/export_output
+
+# Files
+model*
+dataset*

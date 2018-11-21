@@ -9,7 +9,7 @@ _G_MEAN = 116.78
 _B_MEAN = 103.94
 
 # colour map
-label_colours = [(0, 0, 0),  # 0=background
+label_colours_voc = [(0, 0, 0),  # 0=background
                  # 1=aeroplane, 2=bicycle, 3=bird, 4=boat, 5=bottle
                  (128, 0, 0), (0, 128, 0), (128, 128, 0), (0, 0, 128), (128, 0, 128),
                  # 6=bus, 7=car, 8=cat, 9=chair, 10=cow
@@ -19,8 +19,13 @@ label_colours = [(0, 0, 0),  # 0=background
                  # 16=potted plant, 17=sheep, 18=sofa, 19=train, 20=tv/monitor
                  (0, 64, 0), (128, 64, 0), (0, 192, 0), (128, 192, 0), (0, 64, 128)]
 
+label_colours = [(0, 0, 0),  # 0=background
+                (128, 0, 0), (0, 128, 0), (128, 128, 0), (0, 0, 128), (128, 0, 128),
+                (0, 128, 128), (128, 128, 128), (64, 0, 0), (192, 0, 0), (64, 128, 0),
+                (192, 128, 0), (64, 0, 128), (192, 0, 128)]
 
-def decode_labels(mask, num_images=1, num_classes=21):
+
+def decode_labels(mask, num_images=1, num_classes=14):
   """Decode batch of segmentation masks.
 
   Args:
